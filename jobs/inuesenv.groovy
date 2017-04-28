@@ -1,10 +1,9 @@
 def auther = 'jaohaohsuan'
-def repo = 'inu-es-env'
 
-multibranchPipelineJob(repo) {
+multibranchPipelineJob('iNuElasticsearchConfig') {
   branchSources {
     git {
-      remote("https://github.com/${auther}/${repo}.git")
+      remote("https://github.com/${auther}/inu-es-env.git")
     }
   }
   orphanedItemStrategy {
