@@ -1,9 +1,10 @@
 def auther = 'jaohaohsuan'
+def proj   = 'inu-es-env'
 
-multibranchPipelineJob('inu-es-env') {
+multibranchPipelineJob(proj) {
   branchSources {
     git {
-      remote("https://github.com/${auther}/inu-es-env.git")
+      remote("https://github.com/${auther}/${proj}.git")
     }
   }
   orphanedItemStrategy {
