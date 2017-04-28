@@ -1,6 +1,6 @@
 def auther = 'jaohaohsuan'
 
-multibranchPipelineJob('iNuElasticsearchConfig') {
+multibranchPipelineJob('inu-es-env') {
   branchSources {
     git {
       remote("https://github.com/${auther}/inu-es-env.git")
