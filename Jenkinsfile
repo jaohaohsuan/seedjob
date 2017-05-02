@@ -14,7 +14,7 @@ podTemplate(
         }
         stage('build') {
             try {
-                jobDsl ignoreMissingFiles: true, targets: 'jobs/**/*.groovy'
+                jobDsl ignoreMissingFiles: true, ignoreExisting: true, targets: 'jobs/**/*.groovy'
             } catch (e) {
                 echo "${e}"
                 currentBuild.result = FAILURE
